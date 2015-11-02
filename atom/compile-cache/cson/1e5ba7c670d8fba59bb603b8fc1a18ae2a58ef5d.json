@@ -1,0 +1,1 @@
+{"source.js.jsx":{"React component template":{"prefix":"comptempl","body":"import React from 'react'\n\nexport default class ${1} extends React.Component {\n\n}\n\n${1}.propTypes = {\n\n}"}}}

@@ -1,0 +1,74 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': '_log'
+#     'body': 'console.log $1'
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
+
+# Snippet for ReactJS ES6 component template
+'.source.js.jsx':
+  'React component template':
+    'prefix': '_comptempl'
+    'body': """
+      import React from 'react'
+
+      export default class ${1} extends React.Component {
+        constructor(props) {
+          super(props)
+        }
+
+        render() {
+          return (
+            <div />
+          )
+        }
+      }
+
+      ${1}.propTypes = {
+
+      }
+    """
+
+  'JSX element with className':
+    'prefix': '_jsxel'
+    'body': '<${1} className="${2}">${3}</${1}>'
+
+  'React ES6 class method':
+    'prefix': '_rcmeth'
+    'body': """
+      ${1}(${2}) {
+        ${3}
+      }
+    """
+
+  'ES6 import snippet':
+    'prefix': '_imp'
+    'body': 'import ${1} from \'${1}\''
+
+  'ES6 import multiple snippet':
+    'prefix': '_impm'
+    'body': 'import {${1}} from \'${1}\''
+
+  'ES6 JSX file import snippet':
+    'prefix': '_jsximp'
+    'body': 'import ${1} from \'./${1}.jsx\''
+
+  'ES6 JSX file import multiple snippet':
+    'prefix': '_jsximpm'
+    'body': 'import {${1}} from \'./${1}.jsx\''
+
+  'React ES6 ProtType property':
+    'prefix': '_rpropt'
+    'body': '${1}: React.PropTypes.${2}'

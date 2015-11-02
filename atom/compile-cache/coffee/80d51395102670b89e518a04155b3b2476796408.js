@@ -1,0 +1,64 @@
+(function() {
+  describe('BottomPanel', function() {
+    var BottomPanel, bottomPanel, getMessage, linter;
+    BottomPanel = require('../../lib/ui/bottom-panel').BottomPanel;
+    linter = null;
+    bottomPanel = null;
+    beforeEach(function() {
+      if (bottomPanel != null) {
+        bottomPanel.dispose();
+      }
+      bottomPanel = new BottomPanel('File');
+      return waitsForPromise(function() {
+        return atom.packages.activatePackage('linter').then(function() {
+          return linter = atom.packages.getActivePackage('linter').mainModule.instance;
+        });
+      });
+    });
+    getMessage = function(type, filePath) {
+      return {
+        type: type,
+        text: 'Some Message',
+        filePath: filePath
+      };
+    };
+    it('remains visible when theres no active pane', function() {
+      return expect(linter.views.panel.getVisibility()).toBe(true);
+    });
+    it('hides on config change', function() {
+      expect(linter.views.panel.getVisibility()).toBe(true);
+      atom.config.set('linter.showErrorPanel', false);
+      expect(linter.views.panel.getVisibility()).toBe(false);
+      atom.config.set('linter.showErrorPanel', true);
+      return expect(linter.views.panel.getVisibility()).toBe(true);
+    });
+    return describe('{set, remove}Messages', function() {
+      return it('works as expected', function() {
+        var messages;
+        messages = [getMessage('Error'), getMessage('Warning')];
+        bottomPanel.setMessages({
+          added: messages,
+          removed: []
+        });
+        expect(bottomPanel.element.childNodes.length).toBe(2);
+        bottomPanel.setMessages({
+          added: [],
+          removed: messages
+        });
+        expect(bottomPanel.element.childNodes.length).toBe(0);
+        bottomPanel.setMessages({
+          added: messages,
+          removed: []
+        });
+        expect(bottomPanel.element.childNodes.length).toBe(2);
+        bottomPanel.removeMessages(messages);
+        return expect(bottomPanel.element.childNodes.length).toBe(0);
+      });
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAiZmlsZSI6ICIiLAogICJzb3VyY2VSb290IjogIiIsCiAgInNvdXJjZXMiOiBbCiAgICAiL1VzZXJzL0thbWlsaXVzLy5hdG9tL3BhY2thZ2VzL2xpbnRlci9zcGVjL3VpL2JvdHRvbS1wYW5lbC1zcGVjLmNvZmZlZSIKICBdLAogICJuYW1lcyI6IFtdLAogICJtYXBwaW5ncyI6ICJBQUFBO0FBQUEsRUFBQSxRQUFBLENBQVMsYUFBVCxFQUF3QixTQUFBLEdBQUE7QUFDdEIsUUFBQSw0Q0FBQTtBQUFBLElBQUMsY0FBZSxPQUFBLENBQVEsMkJBQVIsRUFBZixXQUFELENBQUE7QUFBQSxJQUNBLE1BQUEsR0FBUyxJQURULENBQUE7QUFBQSxJQUVBLFdBQUEsR0FBYyxJQUZkLENBQUE7QUFBQSxJQUdBLFVBQUEsQ0FBVyxTQUFBLEdBQUE7O1FBQ1QsV0FBVyxDQUFFLE9BQWIsQ0FBQTtPQUFBO0FBQUEsTUFDQSxXQUFBLEdBQWtCLElBQUEsV0FBQSxDQUFZLE1BQVosQ0FEbEIsQ0FBQTthQUVBLGVBQUEsQ0FBZ0IsU0FBQSxHQUFBO2VBQ2QsSUFBSSxDQUFDLFFBQVEsQ0FBQyxlQUFkLENBQThCLFFBQTlCLENBQXVDLENBQUMsSUFBeEMsQ0FBNkMsU0FBQSxHQUFBO2lCQUMzQyxNQUFBLEdBQVMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxnQkFBZCxDQUErQixRQUEvQixDQUF3QyxDQUFDLFVBQVUsQ0FBQyxTQURsQjtRQUFBLENBQTdDLEVBRGM7TUFBQSxDQUFoQixFQUhTO0lBQUEsQ0FBWCxDQUhBLENBQUE7QUFBQSxJQVVBLFVBQUEsR0FBYSxTQUFDLElBQUQsRUFBTyxRQUFQLEdBQUE7QUFDWCxhQUFPO0FBQUEsUUFBQyxNQUFBLElBQUQ7QUFBQSxRQUFPLElBQUEsRUFBTSxjQUFiO0FBQUEsUUFBNkIsVUFBQSxRQUE3QjtPQUFQLENBRFc7SUFBQSxDQVZiLENBQUE7QUFBQSxJQWFBLEVBQUEsQ0FBRyw0Q0FBSCxFQUFpRCxTQUFBLEdBQUE7YUFDL0MsTUFBQSxDQUFP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
+
+//# sourceURL=/Users/Kamilius/.atom/packages/linter/spec/ui/bottom-panel-spec.coffee

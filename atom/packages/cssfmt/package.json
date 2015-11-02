@@ -1,0 +1,322 @@
+{
+  "name": "cssfmt",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Format your CSS using cssfmt",
+  "activationCommands": {
+    "atom-workspace": [
+      "cssfmt:execute"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1000ch/atom-cssfmt.git"
+  },
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "keywords": [
+    "CSS",
+    "format",
+    "style",
+    "cssfmt"
+  ],
+  "author": {
+    "name": "1000ch",
+    "email": "shogo.sensui@gmail.com",
+    "url": "http://github.com/1000ch"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1000ch/atom-cssfmt/issues"
+  },
+  "homepage": "https://github.com/1000ch/atom-cssfmt#readme",
+  "dependencies": {
+    "cssfmt": "^1.3.7"
+  },
+  "readme": "# [atom-cssfmt](https://atom.io/packages/cssfmt) [![Dependency Status](https://david-dm.org/1000ch/atom-cssfmt.svg)](https://david-dm.org/1000ch/atom-cssfmt)\n\nFormat your CSS using [cssfmt](https://github.com/morishitter/cssfmt).\n\n![atom-cssfmt demo](https://raw.githubusercontent.com/1000ch/atom-cssfmt/master/cssfmt.gif)\n\n## Installation\n\n```bash\n$ apm install cssfmt\n```\n\n## Usage\n\n- Press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>f</kbd>\n- Packages > cssfmt > Format CSS\n- Right Click > Format CSS\n\nSelected text will be formatted if there is selection.\n\n## License\n\nMIT: http://1000ch.mit-license.org\n",
+  "readmeFilename": "readme.md",
+  "_id": "cssfmt@1.2.0",
+  "_shasum": "ee7b7eac4f9593da094a7f1e0629bcbc42c1964e",
+  "_resolved": "file:../d-115914-3274-uuz7wg/package.tgz",
+  "_from": "../d-115914-3274-uuz7wg/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "cssfmt",
+        "version": "1.3.7",
+        "path": "node_modules/cssfmt/index.js"
+      },
+      {
+        "name": "editorconfig-indent",
+        "version": "0.1.1",
+        "path": "node_modules/cssfmt/node_modules/editorconfig-indent/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "1.2.0",
+        "path": "node_modules/cssfmt/node_modules/minimist/index.js"
+      },
+      {
+        "name": "postcss",
+        "version": "5.0.9",
+        "path": "node_modules/cssfmt/node_modules/postcss/lib/postcss.js"
+      },
+      {
+        "name": "js-base64",
+        "version": "2.1.9",
+        "path": "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/base64.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.5.1",
+        "path": "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/source-map.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "3.1.2",
+        "path": "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/index.js"
+      },
+      {
+        "name": "has-flag",
+        "version": "1.0.0",
+        "path": "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/node_modules/has-flag/index.js"
+      },
+      {
+        "name": "postcss-scss",
+        "version": "0.1.2",
+        "path": "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-syntax.js"
+      },
+      {
+        "name": "recursive-readdir",
+        "version": "1.2.1",
+        "path": "node_modules/cssfmt/node_modules/recursive-readdir/index.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "0.3.0",
+        "path": "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.7.0",
+        "path": "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "sigmund",
+        "version": "1.0.1",
+        "path": "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/sigmund/sigmund.js"
+      },
+      {
+        "name": "repeat-string",
+        "version": "1.5.2",
+        "path": "node_modules/cssfmt/node_modules/repeat-string/index.js"
+      },
+      {
+        "name": "stdin",
+        "version": "0.0.1",
+        "path": "node_modules/cssfmt/node_modules/stdin/index.js"
+      },
+      {
+        "name": "tmp",
+        "version": "0.0.26",
+        "path": "node_modules/cssfmt/node_modules/tmp/lib/tmp.js"
+      },
+      {
+        "name": "os-tmpdir",
+        "version": "1.0.1",
+        "path": "node_modules/cssfmt/node_modules/tmp/node_modules/os-tmpdir/index.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "index.js",
+        "node_modules/cssfmt/bin/cli.js",
+        "node_modules/cssfmt/index.js",
+        "node_modules/cssfmt/lib/config.js",
+        "node_modules/cssfmt/lib/formatAtRuleParams.js",
+        "node_modules/cssfmt/lib/formatAtRules.js",
+        "node_modules/cssfmt/lib/formatComments.js",
+        "node_modules/cssfmt/lib/formatDecls.js",
+        "node_modules/cssfmt/lib/formatRules.js",
+        "node_modules/cssfmt/lib/formatSassVariables.js",
+        "node_modules/cssfmt/lib/formatSelectors.js",
+        "node_modules/cssfmt/lib/formatValues.js",
+        "node_modules/cssfmt/lib/getIndent.js",
+        "node_modules/cssfmt/lib/hasDecls.js",
+        "node_modules/cssfmt/lib/hasRules.js",
+        "node_modules/cssfmt/lib/util.js",
+        "node_modules/cssfmt/node_modules/editorconfig-indent/example.js",
+        "node_modules/cssfmt/node_modules/editorconfig-indent/index.js",
+        "node_modules/cssfmt/node_modules/minimist/example/parse.js",
+        "node_modules/cssfmt/node_modules/minimist/index.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/at-rule.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/comment.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/container.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/css-syntax-error.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/declaration.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/input.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/lazy-result.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/list.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/map-generator.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/node.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/parse.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/parser.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/postcss.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/previous-map.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/processor.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/result.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/root.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/rule.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/stringifier.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/stringify.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/tokenize.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/vendor.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/warn-once.js",
+        "node_modules/cssfmt/node_modules/postcss/lib/warning.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/base64.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/base64.min.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/old/base64-1.7.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/package.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/array-set.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/base64-vlq.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/base64.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/binary-search.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/mapping-list.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/quick-sort.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/source-map-consumer.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/source-map-generator.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/source-node.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/lib/util.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/source-map.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/browser.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/index.js",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/node_modules/has-flag/index.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-parse.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-parser.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-stringifier.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-stringify.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-syntax.js",
+        "node_modules/cssfmt/node_modules/postcss-scss/lib/scss-tokenize.js",
+        "node_modules/cssfmt/node_modules/recursive-readdir/index.js",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/minimatch.js",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/sigmund/bench.js",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/sigmund/sigmund.js",
+        "node_modules/cssfmt/node_modules/repeat-string/index.js",
+        "node_modules/cssfmt/node_modules/stdin/index.js",
+        "node_modules/cssfmt/node_modules/tmp/lib/tmp.js",
+        "node_modules/cssfmt/node_modules/tmp/node_modules/os-tmpdir/index.js"
+      ],
+      ".json": [
+        "node_modules/cssfmt/node_modules/editorconfig-indent/package.json",
+        "node_modules/cssfmt/node_modules/minimist/package.json",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/bower.json",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/js-base64/package.json",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/source-map/package.json",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/node_modules/has-flag/package.json",
+        "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color/package.json",
+        "node_modules/cssfmt/node_modules/postcss/package.json",
+        "node_modules/cssfmt/node_modules/postcss-scss/package.json",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/lru-cache/package.json",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/node_modules/sigmund/package.json",
+        "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/package.json",
+        "node_modules/cssfmt/node_modules/recursive-readdir/package.json",
+        "node_modules/cssfmt/node_modules/repeat-string/package.json",
+        "node_modules/cssfmt/node_modules/stdin/package.json",
+        "node_modules/cssfmt/node_modules/tmp/node_modules/os-tmpdir/package.json",
+        "node_modules/cssfmt/node_modules/tmp/package.json",
+        "node_modules/cssfmt/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          ""
+        ],
+        "dependencies": {
+          "cssfmt": "^1.3.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/bin",
+          "node_modules/cssfmt",
+          "node_modules/cssfmt/lib",
+          "node_modules/cssfmt/test",
+          "node_modules/cssfmt/test/recursive/foo"
+        ],
+        "dependencies": {
+          "editorconfig-indent": "^0.1.0",
+          "minimist": "^1.1.2",
+          "postcss": "^5.0.6",
+          "postcss-scss": "^0.1.0",
+          "recursive-readdir": "^1.2.1",
+          "repeat-string": "^1.5.2",
+          "stdin": "0.0.1",
+          "tmp": "0.0.26"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/postcss/lib",
+          "node_modules/cssfmt/node_modules/postcss"
+        ],
+        "dependencies": {
+          "supports-color": "^3.1.1",
+          "source-map": "^0.5.1",
+          "js-base64": "^2.1.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/postcss/node_modules/supports-color"
+        ],
+        "dependencies": {
+          "has-flag": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/postcss-scss/lib",
+          "node_modules/cssfmt/node_modules/postcss-scss"
+        ],
+        "dependencies": {
+          "postcss": "^5.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/recursive-readdir",
+          "node_modules/cssfmt/node_modules/recursive-readdir/test"
+        ],
+        "dependencies": {
+          "minimatch": "~0.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch",
+          "node_modules/cssfmt/node_modules/recursive-readdir/node_modules/minimatch/test"
+        ],
+        "dependencies": {
+          "lru-cache": "2",
+          "sigmund": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cssfmt/node_modules/tmp/lib",
+          "node_modules/cssfmt/node_modules/tmp",
+          "node_modules/cssfmt/node_modules/tmp/test",
+          "node_modules/cssfmt/node_modules/tmp/test/symlinkme"
+        ],
+        "dependencies": {
+          "os-tmpdir": "~1.0.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# git pull purge and clean merged local branches
+alias gitcm='git pull -p && git branch --merged | grep "OH_" | while read line ; do git branch -d $line ; done ; echo "Nice & clean"'

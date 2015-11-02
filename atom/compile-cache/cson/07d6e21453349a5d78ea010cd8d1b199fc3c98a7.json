@@ -1,0 +1,1 @@
+{"context-menu":{"atom-text-editor":[{"label":"Toggle test coverage","command":"testcoverage:show"}]},"menu":[{"label":"Packages","submenu":[{"label":"Test coverage","submenu":[{"label":"show","command":"testcoverage:show"}]}]}]}
