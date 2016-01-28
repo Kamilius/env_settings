@@ -1,2 +1,17 @@
-# git pull purge and clean merged local branches
-alias gitcm='git pull -p && git branch --merged | grep "OH_" | while read line ; do git branch -d $line ; done ; echo "Nice & clean"'
+# git clean merged branches
+function removeBranches {
+  local branches=""
+
+  #read line by line
+  while read line
+  do
+    branches+=" ${line}"
+  done
+
+  echo $branches | xargs git branch -D
+  echo $branches | xargs git push origin --delete
+
+  echo "Nice & Clean! :)"
+}
+
+alias gitcm='git branch --merged | grep "OH_" | removeBranches'
